@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'eclipse'
+
+    id("com.diffplug.eclipse.apt") version "3.43.0"
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    annotationProcessor "org.immutables:value:2.10.0"
+    compileOnly "org.immutables:value-annotations:2.10.0"
+
+    compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
+    compileOnly 'org.jspecify:jspecify:0.3.0'
+}
+
+group 'org.acme'
+version '1.0.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-parameters'
+}
