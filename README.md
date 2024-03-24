@@ -9,4 +9,4 @@ The one using `@org.jspecify.annotations.Nullable` (see [code](./ImmutableWithJs
     Annotate the parameter with @javax.annotation.Nullable in method 'appName' declaration, or make sure that null can not be passed as argument.
 
 
-
+Reported [here](https://community.sonarsource.com/t/handling-of-jspecify-nullable-broken-i-think/102998)
